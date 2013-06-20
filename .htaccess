@@ -1,0 +1,9 @@
+Options +FollowSymLinks
+RewriteEngine on
+
+Options -Indexes
+
+# Or, compress certain file types by extension:
+<files *.html>
+SetOutputFilter DEFLATE
+</files>
