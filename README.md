@@ -25,16 +25,8 @@ Implemented registration and new login forms.
 15/06/2013 Implemented a small admin backend, updated navigation files.
 This is my final release for now, in the near future I will be releasing the database which powers this website.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 I can be contacted via Google Group: https://groups.google.com/forum/?fromgroups#!forum/jobslog should you wish to support the further coding of this project or have any queries.
 
 https://www.facebook.com/JobslogSystem
-=======
-I can be contacted via Google Group: https://groups.google.com/forum/?fromgroups#!forum/jobslog  should you wish to support the further coding of this project or have any queries.
->>>>>>> 4d2e172fc370218b7d5e86942fe71c2e37d212bb
-=======
-I can be contacted via Google Group: https://groups.google.com/forum/?fromgroups#!forum/jobslog  should you wish to support the further coding of this project or have any queries.
->>>>>>> 4d2e172fc370218b7d5e86942fe71c2e37d212bb
 
 for use with PHP 5.5+
