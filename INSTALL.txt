@@ -1,0 +1,106 @@
+Project created by Jonathon Maguire 2013.
+
+To Install:
+To install this software you have to change the classes/db.class.php to the relevant Database information.
+
+Then use this database file below to create the website content.
+
+Notes:
+Their is currently a admin feature but you have to change the status in the users db to 1, this will enable admin features for that account.
+
+Change Logo:
+Go to All Pages and look for: <div class="logo"><!-- Jobcentre Logo -->
+<img src="http://workingfutures.interserve.com/images/global/logo.png" />
+</div>
+
+Replace src image with logo image url.
+
+Mysql File:
+-- phpMyAdmin SQL Dump
+-- version 3.5.6
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jun 20, 2013 at 02:32 AM
+-- Server version: 5.6.12
+-- PHP Version: 5.4.11
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `jobcentre`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `events`
+--
+
+CREATE TABLE IF NOT EXISTS `events` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `eventname` varchar(40) NOT NULL,
+  `username` varchar(40) NOT NULL,
+  `date` varchar(50) NOT NULL,
+  `ip` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `jobslog`
+--
+
+CREATE TABLE IF NOT EXISTS `jobslog` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(30) NOT NULL,
+  `ref` varchar(100) NOT NULL,
+  `company` varchar(120) NOT NULL,
+  `whatidid` varchar(250) NOT NULL,
+  `date` varchar(10) NOT NULL,
+  `whathappened` varchar(50) NOT NULL,
+  `whenidonext` varchar(50) NOT NULL,
+  `whendothis` varchar(50) NOT NULL,
+  `flag` varchar(2) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Unique user id',
+  `fname` varchar(25) NOT NULL COMMENT 'Users first name',
+  `lname` varchar(25) NOT NULL COMMENT 'User last name',
+  `username` varchar(50) NOT NULL COMMENT 'Username for user',
+  `password` varchar(100) NOT NULL COMMENT 'User Password',
+  `checkhash` varchar(140) NOT NULL COMMENT 'User Hash',
+  `email` varchar(50) NOT NULL COMMENT 'User Email',
+  `workcoachemail` varchar(50) NOT NULL COMMENT 'WorkCoach email',
+  `loginip` varchar(50) NOT NULL COMMENT 'User Loginip',
+  `browser` varchar(120) NOT NULL COMMENT 'User Browser',
+  `activatehash` varchar(120) NOT NULL COMMENT 'User Activation hash',
+  `status` varchar(4) NOT NULL COMMENT '1 means user active, blank means no user activated',
+  `admin` varchar(2) NOT NULL COMMENT '1 means yes, 2 means no',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+This is the Final Release of this software and I take all credit in creating this software.
+
+You may use this software as much as you like but I would like you to donate if possible to promote future projects I will be working on.
+All code here-in is released by myself so that users can add further features to this software.
