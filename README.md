@@ -21,6 +21,7 @@ Still to do.
 Implemented a secure hashing alogrithm to check user session data, once user logged-in elsewhere session will be destroyed.
 Implemented site events, such as user adding new jobslog as well as the sending of email.
 Implemented registration and new login forms.
+
 13/06/2013 Implemented more user friendly date picker for 'addjob' page.
 15/06/2013 Implemented a small admin backend, updated navigation files.
 This is my final release for now, in the near future I will be releasing the database which powers this website.
