@@ -42,7 +42,7 @@ if(isset($_POST['submitlogin'])){
 <div class="logo"><!-- Jobcentre Logo -->
 <img src="http://workingfutures.interserve.com/images/global/logo.png" />
 </div>
-
+<p style="float:left; clear:left; font-family:Arial, Helvetica, sans-serif; font-size:12pt; color:#000;">Jobslog software created by Jonathon Maguire, Register to start using our system.</p>
 
 </div><!-- Nav End -->
 <div style="float:left; clear:left; padding:5px; width:200px; height:auto; font-size:10pt; color:#000;">
@@ -53,10 +53,10 @@ if(isset($_POST['submitlogin'])){
 <!-- Start Formoid form-->
 <link rel="stylesheet" href="login_files/formoid1/formoid-default.css" type="text/css" />
 <script type="text/javascript" src="login_files/formoid1/jquery.min.js"></script>
-<form class="formoid-default" style="background-color:#FFFFFF;font-size:14px;font-family:'Open Sans','Helvetica Neue','Helvetica',Arial,Verdana,sans-serif;color:#666666;width:250px" title="Login" method="post" action="checkpoint.php">
+<form class="formoid-default" style="background-color:#FFFFFF;font-size:14px;font-family:'Open Sans','Helvetica Neue','Helvetica',Arial,Verdana,sans-serif;color:#666666;width:250px" title="Login" method="post" action="checkpoint.php" autocomplete="off">
 	<div class="element-text" ><h2 class="title">Login</h2></div>
-	<div class="element-input"  <?php frmd_add_class("input")?>><label class="title">Username<span class="required">*</span></label><input type="text" name="username" required="required"/></div>
-	<div class="element-password"  <?php frmd_add_class("password")?>><label class="title">Password<span class="required">*</span></label><input type="password" name="password" value="" required="required"/></div>
+	<div class="element-input"  <?php frmd_add_class("input")?>><label class="title">Username<span class="required">*</span></label><input type="text" name="username" required/></div>
+	<div class="element-password"  <?php frmd_add_class("password")?>><label class="title">Password<span class="required">*</span></label><input type="password" name="password" value="" required/></div>
 	<div class="element-submit"  title="Login to <?php echo $sitename; ?>"><input type="submit" name="submitlogin" value="Login"/></div>
 
 </form>
@@ -70,7 +70,7 @@ if(isset($_POST['submitlogin'])){
 <div style="margin-left:10px; width:300px; height:auto; float:left;">
 <?php if (frmd_message()): ?>
 <link rel="stylesheet" href="form_files/formoid1/formoid-default.css" type="text/css" />
-<span class="alert alert-success"><?php=FINISH_MESSAGE;?></span>
+<span class="alert alert-success"><?php FINISH_MESSAGE;?></span>
 <?php else: ?>
 <!-- Start Formoid form-->
 <?php
@@ -101,14 +101,14 @@ if(isset($_POST['submitregistration'])){
 ?>
 <link rel="stylesheet" href="form_files/formoid1/formoid-default.css" type="text/css" />
 <script type="text/javascript" src="form_files/formoid1/jquery.min.js"></script>
-<form class="formoid-default" style="background-color:#FFFFFF;font-size:14px;font-family:'Open Sans','Helvetica Neue','Helvetica',Arial,Verdana,sans-serif;color:#666666;width:480px" title="Register form" method="post">
+<form class="formoid-default" style="background-color:#FFFFFF;font-size:14px;font-family:'Open Sans','Helvetica Neue','Helvetica',Arial,Verdana,sans-serif;color:#666666;width:480px" title="Register form" method="post" action="checkpoint.php" autocomplete="off">
 	<div class="element-text"  title="Register with <?php echo $sitename; ?>"><h2 class="title">Register with <?php echo $sitename; ?></h2></div>
-	<div class="element-input"  <?php frmd_add_class("input")?>><label class="title">Firstname<span class="required">*</span></label><input type="text" name="fname" required="required"/></div>
-	<div class="element-input"  <?php frmd_add_class("input1")?>><label class="title">Lastname<span class="required">*</span></label><input type="text" name="lname" required="required"/></div>
+	<div class="element-input"  <?php frmd_add_class("input")?>><label class="title">Firstname<span class="required">*</span></label><input type="text" name="fname" required/></div>
+	<div class="element-input"  <?php frmd_add_class("input1")?>><label class="title">Lastname<span class="required">*</span></label><input type="text" name="lname" required/></div>
 	<div class="element-input"  title="Choose a username for <?php echo $sitename; ?>" <?php frmd_add_class("input2")?>><label class="title">Username</label><input type="text" name="username" /></div>
-	<div class="element-password"  title="Choose a secure password" <?php frmd_add_class("password")?>><label class="title">Password<span class="required">*</span></label><input type="password" name="password" value="" required="required"/></div>
-	<div class="element-password"  <?php frmd_add_class("password1")?>><label class="title">Re-enter Password<span class="required">*</span></label><input type="password" name="password1" value="" required="required"/></div>
-	<div class="element-email"  title="Enter your email address" <?php frmd_add_class("email")?>><label class="title">Email<span class="required">*</span></label><input type="email" name="email" value="" required="required"/></div>
+	<div class="element-password"  title="Choose a secure password" <?php frmd_add_class("password")?>><label class="title">Password<span class="required">*</span></label><input type="password" name="password" value="" required/></div>
+	<div class="element-password"  <?php frmd_add_class("password1")?>><label class="title">Re-enter Password<span class="required">*</span></label><input type="password" name="password1" value="" required/></div>
+	<div class="element-email"  title="Enter your email address" <?php frmd_add_class("email")?>><label class="title">Email<span class="required">*</span></label><input type="email" name="email" value="" required/></div>
 	<div class="element-recaptcha"  <?php frmd_add_class("captcha")?>><label class="title">reCAPTCHA</label><script type="text/javascript">var RecaptchaOptions = {theme : "clean"};</script>
 <script type="text/javascript" src="http://www.google.com/recaptcha/api/challenge?k=6LetXOISAAAAANs29GbM1Hc2hYkBJYAuW89ugRxM&theme=clean"></script>
 <noscript><iframe src="http://www.google.com/recaptcha/api/noscript?k=6LetXOISAAAAANs29GbM1Hc2hYkBJYAuW89ugRxM&hl=en" height="300" width="500" frameborder="0"></iframe></br>
